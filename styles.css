@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     background-image: url(./assets/background_image.jpg);
     background-position: top center;
@@ -25,6 +26,7 @@ body * {
 }
 
 header {
+    height: 152px;
     margin-top: 32px;
 }
 
@@ -35,6 +37,12 @@ header div {
     margin: auto;
     display: flex;
     padding: 4px;
+    transition: transform .3s; 
+    animation: fromTop .8s .4s backwards;
+}
+
+header div:hover {
+    transform: scale(1.3);
 }
 
 header img {
@@ -57,6 +65,19 @@ section {
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     padding-top: 4px;
     border-radius: 10px;
+    
+}
+
+main section:nth-child(1){
+    animation: fromLeft .9s 1.4s backwards;
+}
+
+main section:nth-child(2){
+    animation: fromLeft .9s 1.7s backwards;
+}
+
+main section:nth-child(3){
+    animation: fromLeft .9s 2s backwards;
 }
 
 section div {
@@ -84,6 +105,14 @@ gap: 16px;
 flex-wrap: wrap;
 }
 
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.3);
+}
+
 .favorite-games img {
     border-radius: 8px;
     width: 90px;
@@ -92,13 +121,38 @@ flex-wrap: wrap;
 .favorite-channels-streamers img {
     border-radius: 50%;
     width: 70px;
+    border: 1px solid #443E54;
 }
 
 .network-list svg {
-    border-radius: 50%;
     width: 70px;
 }
 
-li {
+
+/* animation */
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
 
 }
