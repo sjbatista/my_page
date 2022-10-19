@@ -88,6 +88,10 @@ main section:nth-child(5){
     animation: fromLeft .9s 2.6s backwards;
 }
 
+main section:nth-child(6){
+    animation: fromLeft .9s 2.9s backwards;
+}
+
 section div {
     background-color: #2A2634;
     padding: 32px;
