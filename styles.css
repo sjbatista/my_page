@@ -7,10 +7,10 @@
 
 body{
     background-image: url(./assets/background_4.jpg);
-    background-position: bottom center;
+    background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: #121214;
+    background-color: #000000;
 }
 
 
@@ -78,6 +78,14 @@ main section:nth-child(2){
 
 main section:nth-child(3){
     animation: fromLeft .9s 2s backwards;
+}
+
+main section:nth-child(4){
+    animation: fromLeft .9s 2.3s backwards;
+}
+
+main section:nth-child(5){
+    animation: fromLeft .9s 2.6s backwards;
 }
 
 section div {
